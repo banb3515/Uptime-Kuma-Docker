@@ -1,0 +1,10 @@
+services:
+  uptime-kuma:
+    container_name: uptime-kuma
+    image: uptime-kuma:latest
+    network_mode: bridge
+    restart: unless-stopped
+    volumes:
+      - ./data:/app/data:Z
+    ports:
+      - 8080:3001
